@@ -19,6 +19,6 @@ namespace ExemploMetodoExtensao
             
             Console.WriteLine($"O quadrado de {numero} é {resultado}");
             // Saída: O quadrado de 5 é 25
-        }
+        } 
     }
 }
