@@ -21,6 +21,7 @@ namespace ProjetoExemplo
         static void Main(string[] args)
         {
             var carro = new Carro();
+            carro.Mover();
             carro.Acelerar();
         }
     }
