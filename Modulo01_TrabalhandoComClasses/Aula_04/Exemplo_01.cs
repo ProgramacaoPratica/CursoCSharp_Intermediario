@@ -1,24 +1,23 @@
-using System;
-
-namespace ExemploMetodoExtensao
+public class Pessoa
 {
-    public static class IntExtensions
-    {
-        public static int Quadrado(this int numero)
-        {
-            return numero * numero;
-        }
-    }
+    public string Nome { get; set; }
+    public int Idade { get; set; }
 
-    class Program
+    public Pessoa(string nome, int idade)
     {
-        static void Main(string[] args)
-        {
-            int numero = 5;
-            int resultado = numero.Quadrado();
-            
-            Console.WriteLine($"O quadrado de {numero} é {resultado}");
-            // Saída: O quadrado de 5 é 25
-        } 
+        Nome = nome;
+        Idade = idade;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Pessoa pessoa1 = new Pessoa("João", 25);
+        Pessoa pessoa2 = new Pessoa("Maria", 30);
+        
+        Console.WriteLine($"Nome: {pessoa1.Nome}, Idade: {pessoa1.Idade}");
+        Console.WriteLine($"Nome: {pessoa2.Nome}, Idade: {pessoa2.Idade}");
     }
 }

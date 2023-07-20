@@ -2,18 +2,16 @@ namespace ProjetoExemplo
 {
     public class Exemplo
     {
-        public static int Contador { get; set; }
-        public string Nome { get; set; }
+        public readonly int ValorFixo;
 
-        static Exemplo()
+        public Exemplo(int valor)
         {
-            Contador = 0;
+            ValorFixo = valor;
         }
 
-        public Exemplo(string nome)
+        public void ImprimirValor()
         {
-            Nome = nome;
-            Contador++;
+            Console.WriteLine($"Valor Fixo: {ValorFixo}");
         }
     }
 
@@ -21,11 +19,10 @@ namespace ProjetoExemplo
     {
         static void Main(string[] args)
         {
-            Exemplo obj1 = new Exemplo("Objeto 1");
-            Exemplo obj2 = new Exemplo("Objeto 2");
+            Exemplo exemplo = new Exemplo(10);
+            exemplo.ImprimirValor();
 
-            Console.WriteLine($"Contador: {Exemplo.Contador}");
-            // Saída: Contador: 2
+            // exemplo.ValorFixo = 20; // Erro! O atributo readonly não pode ser modificado após a inicialização.
         }
     }
 }

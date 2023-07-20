@@ -1,23 +1,31 @@
-public class Pessoa
+namespace ProjetoExemplo
 {
-    public string Nome { get; set; }
-    public int Idade { get; set; }
-
-    public Pessoa(string nome, int idade)
+    public class Exemplo
     {
-        Nome = nome;
-        Idade = idade;
+        public static int Contador { get; set; }
+        public string Nome { get; set; }
+
+        static Exemplo()
+        {
+            Contador = 0;
+        }
+
+        public Exemplo(string nome)
+        {
+            Nome = nome;
+            Contador++;
+        }
     }
-}
 
-class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        Pessoa pessoa1 = new Pessoa("João", 25);
-        Pessoa pessoa2 = new Pessoa("Maria", 30);
-        
-        Console.WriteLine($"Nome: {pessoa1.Nome}, Idade: {pessoa1.Idade}");
-        Console.WriteLine($"Nome: {pessoa2.Nome}, Idade: {pessoa2.Idade}");
+        static void Main(string[] args)
+        {
+            Exemplo obj1 = new Exemplo("Objeto 1");
+            Exemplo obj2 = new Exemplo("Objeto 2");
+
+            Console.WriteLine($"Contador: {Exemplo.Contador}");
+            // Saída: Contador: 2
+        }
     }
 }

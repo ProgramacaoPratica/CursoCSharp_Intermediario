@@ -1,17 +1,20 @@
 namespace ProjetoExemplo
 {
-    public class Exemplo
+    public class Pessoa
     {
-        public readonly int ValorFixo;
+        private string nome;
+        private int idade;
 
-        public Exemplo(int valor)
+        public string Nome
         {
-            ValorFixo = valor;
+            get { return nome; }
+            set { nome = value; }
         }
 
-        public void ImprimirValor()
+        public int Idade
         {
-            Console.WriteLine($"Valor Fixo: {ValorFixo}");
+            get { return idade; }
+            set { idade = value; }
         }
     }
 
@@ -19,10 +22,12 @@ namespace ProjetoExemplo
     {
         static void Main(string[] args)
         {
-            Exemplo exemplo = new Exemplo(10);
-            exemplo.ImprimirValor();
+            Pessoa pessoa = new Pessoa();
+            pessoa.Nome = "João";
+            pessoa.Idade = 25;
 
-            // exemplo.ValorFixo = 20; // Erro! O atributo readonly não pode ser modificado após a inicialização.
+            Console.WriteLine($"Nome: {pessoa.Nome}, Idade: {pessoa.Idade}");
+            // Saída: Nome: João, Idade: 25
         }
     }
 }

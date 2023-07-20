@@ -1,21 +1,30 @@
 namespace ProjetoExemplo
 {
-    public class Pessoa
+    public enum DiaSemana
     {
-        public string Nome { get; set; }
-        public int Idade { get; set; }
+        Segunda,
+        Terca,
+        Quarta,
+        Quinta,
+        Sexta,
+        Sabado,
+        Domingo
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Pessoa pessoa = new Pessoa();
-            pessoa.Nome = "João";
-            pessoa.Idade = 25;
+            DiaSemana dia = DiaSemana.Segunda;
 
-            Console.WriteLine($"Nome: {pessoa.Nome}, Idade: {pessoa.Idade}");
-            // Saída: Nome: João, Idade: 25
+            if (dia == DiaSemana.Sabado || dia == DiaSemana.Domingo)
+            {
+                Console.WriteLine("É fim de semana!");
+            }
+            else
+            {
+                Console.WriteLine("Não é fim de semana!");
+            }
         }
     }
 }
