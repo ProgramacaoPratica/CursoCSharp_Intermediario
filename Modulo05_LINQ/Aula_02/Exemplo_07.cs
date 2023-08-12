@@ -9,6 +9,7 @@ namespace ProjetoExemplo
         }
         static void Main(string[] args)
         {
+            //Consulta com ordenação personalizada (OrderBy e ThenBy): Suponha que temos uma lista de produtos e queremos ordená-los por nome em ordem alfabética e, em caso de nomes iguais, por preço em ordem crescente
             List<Produto> produtos = new List<Produto>()
             {
                 new Produto { Nome = "TV", Preco = 1500 },
