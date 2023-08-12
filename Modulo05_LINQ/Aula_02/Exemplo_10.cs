@@ -10,6 +10,7 @@ namespace ProjetoExemplo
 
         static void Main(string[] args)
         {
+            //Consulta com filtragem e projeção personalizada (Where e Select): Suponha que temos uma lista de funcionários e queremos obter apenas os funcionários com salário acima de 5000, e projetar uma nova lista com seus nomes e salários
             List<Funcionario> funcionarios = new List<Funcionario>()
             {
                 new Funcionario { Nome = "João", Salario = 6000 },
