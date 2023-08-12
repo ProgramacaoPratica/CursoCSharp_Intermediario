@@ -4,6 +4,7 @@ namespace ProjetoExemplo
     {
         static void Main(string[] args)
         {
+            //Consulta com operações de conjunto (Distinct, Union, Intersect, Except): Suponha que temos duas listas de números e queremos obter os números distintos, a união de ambos, a interseção entre eles e a diferença entre as duas listas
             List<int> lista1 = new List<int>() { 1, 2, 3, 4, 5 };
             List<int> lista2 = new List<int>() { 4, 5, 6, 7, 8 };
 
