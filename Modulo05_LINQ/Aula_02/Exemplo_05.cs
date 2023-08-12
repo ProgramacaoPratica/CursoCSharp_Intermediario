@@ -17,6 +17,7 @@ namespace ProjetoExemplo
 
         static void Main(string[] args)
         {
+            //Consulta com junção (Join): Suponha que temos duas listas, uma contendo informações de alunos e outra contendo informações de cursos, e queremos fazer uma consulta para obter os alunos que estão matriculados em determinado curso
             List<Aluno> alunos = new List<Aluno>()
             {
                 new Aluno { Nome = "João", Idade = 20, CursoId = 1 },
