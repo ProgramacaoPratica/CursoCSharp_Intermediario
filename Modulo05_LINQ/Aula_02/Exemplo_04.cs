@@ -10,6 +10,7 @@ namespace ProjetoExemplo
 
         static void Main(string[] args)
         {
+            //Agrupamento de uma lista: Suponha que temos uma lista de estudantes e queremos agrupá-los por idade
             List<Estudante> estudantes = new List<Estudante>()
             {
                 new Estudante { Nome = "João", Idade = 20 },
