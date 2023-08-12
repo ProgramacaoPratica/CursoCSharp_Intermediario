@@ -10,6 +10,7 @@ namespace ProjetoExemplo
 
         static void Main(string[] args)
         {
+            //Consulta com projeção personalizada (Select): Suponha que temos uma lista de produtos e queremos obter uma nova lista apenas com o nome e o preço de cada produto
             List<Produto> produtos = new List<Produto>()
             {
                 new Produto { Nome = "TV", Preco = 1500 },
