@@ -10,6 +10,7 @@ namespace ProjetoExemplo
 
         static void Main(string[] args)
         {
+            //Projeção de uma lista: Suponha que temos uma lista de produtos e queremos obter apenas os nomes dos produtos:
             List<Produto> produtos = new List<Produto>()
             {
                 new Produto { Nome = "Celular", Preco = 1000 },
